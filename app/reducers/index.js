@@ -1,5 +1,7 @@
 import counter from './counter'
+import test from './test'
 
 export {
-  counter
+  counter,
+  test
 }
