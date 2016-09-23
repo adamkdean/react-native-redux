@@ -22,11 +22,10 @@ class CounterApp extends Component {
   }
 }
 
-export default connect(
-  state => ({
+export default connect(state => ({
     state: state.counter
   }),
-  dispatch => ({
+  (dispatch) => ({
     actions: bindActionCreators(counterActions, dispatch)
   })
 )(CounterApp)
