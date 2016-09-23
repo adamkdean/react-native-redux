@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import * as testActions from '../actions/testActions'
 import NavTest from '../components/navTest'
 
-class RedScene extends Component {
+class BlueScene extends Component {
   constructor(props) {
     super(props)
   }
@@ -40,4 +40,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(RedScene)
+)(BlueScene)
