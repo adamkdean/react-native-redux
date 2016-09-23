@@ -28,8 +28,8 @@ export default class Counter extends Component {
   render() {
     const { counter, increment, decrement } = this.props
     return (
-      <View style={style.view}>
-        <Text>{counter}</Text>
+      <View style={styles.view}>
+        <Text>Value: {counter}</Text>
         <TouchableOpacity onPress={increment} style={styles.button}>
           <Text>Up</Text>
         </TouchableOpacity>

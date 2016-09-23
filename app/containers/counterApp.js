@@ -1,5 +1,3 @@
-'use strict'
-
 import React, { Component, Text } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -16,8 +14,6 @@ class CounterApp extends Component {
 
   render() {
     const { state, actions } = this.props
-    if (!state) return (<Text>Loading</Text>)
-
     return (
       <CounterApp
           counter={state.count}
