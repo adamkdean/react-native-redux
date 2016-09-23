@@ -1,12 +1,11 @@
-import React, { Component, Text } from 'react'
+'use strict'
+
+import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as counterActions from '../actions/counterActions'
 import Counter from '../components/counter'
 
-// @connect(state => ({
-//   state: state.counter
-// }))
 class CounterApp extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +14,7 @@ class CounterApp extends Component {
   render() {
     const { state, actions } = this.props
     return (
-      <CounterApp
+      <Counter
         counter={state.count}
         {...actions} />
     )
