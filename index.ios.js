@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native'
-import App from './index.shared.js'
+import App from './app/containers/app'
 
-AppRegistry.registerComponent('App', () => App)
+AppRegistry.registerComponent('reactNativeReduxApp', () => App)
