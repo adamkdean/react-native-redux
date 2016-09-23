@@ -1,13 +1,15 @@
 import * as types from './actionTypes'
 
-export function goToBlue() {
+export function goToBlue(navigator) {
   return {
-    type: types.GO_TO_BLUE
+    type: types.GO_TO_BLUE,
+    navigator
   }
 }
 
-export function goToRed() {
+export function goToRed(navigator) {
   return {
-    type: types.GO_TO_RED
+    type: types.GO_TO_RED,
+    navigator
   }
 }

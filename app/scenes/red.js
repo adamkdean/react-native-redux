@@ -7,21 +7,26 @@ import { connect } from 'react-redux'
 import * as testActions from '../actions/testActions'
 import NavTest from '../components/navTest'
 
-class RedScene extends Component {
+class Red extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     const { store, actions } = this.props
+
     return (
       <View style={{ flex: 1, marginTop: 22 }}>
         <Text>Current: RED</Text>
         <NavTest
             labelText="GO TO BLUE"
-            onLabelClick={actions.goToBlue} />
+            onLabelClick={this._nav(actions.goToBlue)} />
       </View>
     )
+  }
+
+  _nav(action) {
+    return () => action(this.props.navigator)
   }
 }
 
@@ -40,4 +45,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(RedScene)
+)(Red)

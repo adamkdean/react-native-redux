@@ -1,21 +1,25 @@
 import * as types from '../actions/actionTypes'
+import Red from '../scenes/red'
+import Blue from '../scenes/blue'
 
-const initialState = {
-  test: 0
-}
-
-export default function test(state = initialState, action = {}) {
+export default function test(state = {}, action = {}) {
   switch (action.type) {
     case types.GO_TO_BLUE:
-      console.log('go to blue reducer')
-      return {
-        ...state
-      }
+      action.navigator.push({
+        component: Blue,
+        type: 'Scene',
+        passProps: {}
+      })
+      return state
+
     case types.GO_TO_RED:
-      console.log('go to red reducer')
-      return {
-        ...state
-      }
+      action.navigator.push({
+        component: Red,
+        type: 'Scene',
+        passProps: {}
+      })
+      return state
+
     default:
       return state
   }
